@@ -7,9 +7,9 @@ logging:
 # Jira configuration
 jira:
   project_key: "SCRUM"
-  url: "https://mjsingh07.atlassian.net"
-  email: "mj.singh07@gmail.com"
-  api_token: "ATATT3xFfGF0pQ-duVe0CIGHaZ7fjIFjolL8w6sgWz5OQyukFg4McM_AAFqIyV-vuDO9en0EPobIk-d02yiwisfxHes-RRc4Pg2j2aETHF_mKaXZsDRblVlBrK7kuDQYs0nCR69CTranUCtz440QWcuYXRcg9zS9t_VkZK7CxG1vfXcj2U85Pog=16DEA1A0"
+  url: "https://<username>.atlassian.net"
+  email: "email-id"
+  api_token: "<API Token>"
   fields:
     story_points: "customfield_10016"
     epic_link: "customfield_10014"
@@ -21,7 +21,7 @@ ai:
   model: "gpt-3.5-turbo"
   temperature: 0.7
   max_tokens: 2000
-  openai_api_key: "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"
+  openai_api_key: "API key"
   prompt_templates:
     story_analysis: "Analyze this design element and create a user story..."
     acceptance_criteria: "Generate acceptance criteria for..."
@@ -29,7 +29,7 @@ ai:
 
 # Figma configuration
 figma:
-  access_token: "figd_gWs0c-0D-efazwGKPzrkHfKEm2WC_LZWgCmC-q4e"
+  access_token: "<token>"
   # components_to_analyze:
   #   - "FRAME"
   #   - "COMPONENT"
