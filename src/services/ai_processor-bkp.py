@@ -1,0 +1,528 @@
+from typing import Dict, List, Any
+from openai import OpenAI
+from loguru import logger
+from pydantic import BaseModel
+
+class DesignAnalysis(BaseModel):
+    """Results of AI analysis of design elements"""
+    title: str
+    description: str
+    user_story: str
+    acceptance_criteria: List[str]
+    technical_requirements: List[str]
+    story_points: int
+    priority: str
+    type: str = "Feature"  # Default type for backward compatibility
+
+class AIProcessor:
+    """Processes design elements using AI to generate user stories"""
+    
+    def __init__(self, api_key: str, config: Dict):
+        self.client = OpenAI(api_key=api_key)
+        self.config = config
+        self._application_context = None  # Store analyzed application context
+        
+        self.context_prompt = """You are an expert Product Manager and UX Designer tasked with analyzing a complete application design from Figma. First, understand the overall application context, user flows, and business goals before breaking it down into user stories.
+
+Analyze the provided design elements to:
+1. Identify the core purpose of the application
+2. Understand the main user flows and journeys
+3. Recognize key features and their relationships
+4. Identify common patterns and shared components
+5. Understand the application's architecture and hierarchy
+
+Provide your analysis in this format:
+APPLICATION_CONTEXT:
+- Core Purpose: [Main purpose of the application]
+- Target Users: [Primary user types]
+- Key Features: [Main features identified]
+- User Flows: [Major user journeys]
+- Shared Components: [Common elements across features]
+- Technical Architecture: [Key technical considerations]
+"""
+
+        self.system_prompt = """You are an expert Product Manager and UX Designer with deep experience in converting design specifications into detailed user stories. Your task is to analyze Figma design elements within the broader application context and create comprehensive, actionable user stories.
+
+Current Application Context:
+{application_context}
+
+Follow these guidelines for deep product analysis:
+
+1. Design Intent Analysis:
+- Analyze the purpose and context of each design element
+- Consider how it fits into the overall user journey
+- Identify the business goals it addresses
+- Understand the user problems it solves
+- Consider the interaction patterns and user expectations
+
+2. Story Title Creation:
+- Create strategic, outcome-focused titles
+- Use the format: "[Business Value] - [Specific Feature/Component]"
+- Examples:
+  * "Enhance Customer Support - Smart Chat Assistant Integration"
+  * "Streamline User Navigation - Department Selection Interface"
+  * "Secure User Access - Authentication Flow Implementation"
+
+3. User Story Analysis:
+- Identify specific user personas and their needs
+- Consider user skill levels and expectations
+- Analyze the context of use and user goals
+- Think about user pain points being addressed
+- Format: "As a [specific user type], I want [detailed action/feature] so that [clear business/user benefit]"
+
+4. Technical and UX Requirements:
+- Break down the implementation needs:
+  * UI/UX specifications from Figma
+  * Interaction patterns and behaviors
+  * State management requirements
+  * Data flow and integration points
+  * Performance requirements
+- Consider:
+  * Accessibility standards (WCAG compliance)
+  * Responsive design requirements
+  * Cross-browser compatibility
+  * Performance benchmarks
+  * Security considerations
+
+5. Acceptance Criteria:
+- Write specific, testable criteria covering:
+  * Functional requirements
+  * User interaction flows
+  * Edge cases and error scenarios
+  * Performance metrics
+  * Accessibility requirements
+  * Visual design compliance
+- Include validation steps for:
+  * User flow completion
+  * Error handling
+  * Data validation
+  * UI/UX consistency
+  * Performance thresholds
+
+6. Story Points Estimation:
+Consider these factors:
+1 point: 
+  - Simple UI text/label changes
+  - Minor style updates
+  - No backend changes
+2 points:
+  - Simple component implementation
+  - Basic form creation
+  - Minimal API integration
+3 points:
+  - Complex component with state
+  - Multiple API integrations
+  - Basic user flow implementation
+5 points:
+  - Complex user flows
+  - Multiple component integration
+  - Advanced state management
+8 points:
+  - Complex system integration
+  - Advanced feature implementation
+  - Multiple dependency coordination
+
+7. Priority Assessment:
+Evaluate based on:
+- Highest:
+  * Critical user journey blockers
+  * Core functionality gaps
+  * Major security issues
+- High:
+  * Key user flow improvements
+  * Important business requirements
+  * Significant UX enhancements
+- Medium:
+  * Non-critical feature additions
+  * UX improvements
+  * Performance optimizations
+- Low:
+  * Nice-to-have features
+  * Minor enhancements
+  * Visual refinements
+
+8. Implementation Considerations:
+- Analyze technical feasibility
+- Consider:
+  * Reusability opportunities
+  * Component dependencies
+  * State management needs
+  * API requirements
+  * Performance implications
+  * Security requirements
+  * Testing strategies
+  * Documentation needs
+
+Remember to:
+- Think deeply about user needs and behaviors
+- Consider the full user journey context
+- Analyze business impact and value
+- Consider technical constraints and opportunities
+- Focus on measurable outcomes
+- Think about future scalability
+- Consider maintenance implications
+- Evaluate security implications
+- Assess performance impact
+"""
+
+    def analyze_application_context(self, elements: list) -> str:
+        overview = self._create_elements_overview(elements)
+        prompt = (
+            "You are a product manager. Here is a summary of all design elements:\n"
+            f"{overview}\n"
+            "Analyze the product as a whole. Identify main user flows, features, and business objectives. "
+            "Provide a concise product context summary."
+        )
+        response = self.client.chat.completions.create(
+            model=self.config.get("model", "gpt-4.0-turbo"),
+            temperature=self.config.get("temperature", 0.3),
+            messages=[
+                {"role": "system", "content": "You are an expert product manager."},
+                {"role": "user", "content": prompt}
+            ]
+        )
+        # Parse and store the context for later use
+        context_str = response.choices[0].message.content
+        self._application_context = self._parse_context_response(context_str)
+        return context_str
+
+    def _create_elements_overview(self, elements: List[Dict]) -> str:
+        """Create a comprehensive overview of all elements"""
+        overview = ["Application Elements Overview:"]
+        
+        # Group elements by type
+        elements_by_type = {}
+        for element in elements:
+            element_type = element.get('type', 'Unknown')
+            if element_type not in elements_by_type:
+                elements_by_type[element_type] = []
+            elements_by_type[element_type].append(element)
+        
+        # Create hierarchical overview
+        for element_type, type_elements in elements_by_type.items():
+            overview.append(f"\n{element_type} Components:")
+            for element in type_elements:
+                name = element.get('name', 'Unnamed')
+                desc = element.get('description', 'No description')
+                props = self._format_properties(element.get('properties', {}))
+                overview.append(f"- {name}")
+                overview.append(f"  Description: {desc}")
+                overview.append(f"  Properties:\n{props}")
+        
+        return "\n".join(overview)
+
+    def _parse_context_response(self, response: str) -> Dict:
+        """Parse the application context response"""
+        context = {
+            'core_purpose': '',
+            'target_users': [],
+            'key_features': [],
+            'user_flows': [],
+            'shared_components': [],
+            'technical_architecture': []
+        }
+        
+        current_section = None
+        for line in response.split('\n'):
+            line = line.strip()
+            if not line:
+                continue
+                
+            if 'Core Purpose:' in line:
+                current_section = 'core_purpose'
+                context['core_purpose'] = line.split(':', 1)[1].strip()
+            elif 'Target Users:' in line:
+                current_section = 'target_users'
+            elif 'Key Features:' in line:
+                current_section = 'key_features'
+            elif 'User Flows:' in line:
+                current_section = 'user_flows'
+            elif 'Shared Components:' in line:
+                current_section = 'shared_components'
+            elif 'Technical Architecture:' in line:
+                current_section = 'technical_architecture'
+            elif line.startswith('-') and current_section and current_section != 'core_purpose':
+                context[current_section].append(line.replace('-', '').strip())
+        
+        return context
+
+    def analyze_element(self, element: Dict) -> DesignAnalysis:
+        """
+        Analyze a design element and generate a user story
+        
+        Args:
+            element: Figma design element to analyze
+            
+        Returns:
+            Analysis results including story details
+        """
+        try:
+            # Ensure we have application context
+            if not self._application_context:
+                raise ValueError("Application context not analyzed. Call analyze_application_context first.")
+            
+            # Create detailed prompt for the element with context
+            element_prompt = self._create_element_prompt(element)
+            
+            # Format the system prompt with the application context
+            contextualized_prompt = self.system_prompt.format(
+                application_context=self._format_context(self._application_context)
+            )
+
+            # Print or log the prompts and content
+            print("\n--- OpenAI SYSTEM PROMPT (Element) ---\n", contextualized_prompt)
+            print("\n--- OpenAI USER PROMPT (Element) ---\n", element_prompt)
+            print("\n--- Figma Element ---\n", element)
+            
+            # Get AI completion
+            response = self.client.chat.completions.create(
+                model=self.config.get("model", "gpt-3.5-turbo"),
+                temperature=self.config.get("temperature", 0.7),
+                messages=[
+                    {"role": "system", "content": contextualized_prompt},
+                    {"role": "user", "content": element_prompt}
+                ]
+            )
+            
+            print("LLM Response:\n", response.choices[0].message.content)
+            
+            # Parse and structure the response
+            return self._parse_response(response.choices[0].message.content)
+            
+        except Exception as e:
+            logger.error(f"Error analyzing element: {e}")
+            raise
+
+    def _format_context(self, context: Dict) -> str:
+        """Format application context for the prompt"""
+        sections = [
+            f"Core Purpose: {context['core_purpose']}",
+            "\nTarget Users:",
+            *[f"- {user}" for user in context['target_users']],
+            "\nKey Features:",
+            *[f"- {feature}" for feature in context['key_features']],
+            "\nUser Flows:",
+            *[f"- {flow}" for flow in context['user_flows']],
+            "\nShared Components:",
+            *[f"- {component}" for component in context['shared_components']],
+            "\nTechnical Architecture:",
+            *[f"- {tech}" for tech in context['technical_architecture']]
+        ]
+        return "\n".join(sections)
+
+    def _create_element_prompt(self, element: Dict) -> str:
+        """Create a detailed prompt for element analysis"""
+        return f"""Analyze this Figma design element and create a comprehensive user story. Consider the element's context, purpose, and how it fits into the overall user experience.
+
+Element Details:
+- Type: {element.get('type')}
+- Name: {element.get('name')}
+- Description: {element.get('description', 'N/A')}
+
+Properties:
+{self._format_properties(element.get('properties', {}))}
+
+Please provide a detailed analysis covering:
+
+1. Design Intent:
+- What is the purpose of this element?
+- How does it fit into the user journey?
+- What user problems does it solve?
+- What business goals does it address?
+
+2. User Story:
+- Identify the specific user persona
+- Describe the user's goal and motivation
+- Explain the business/user value
+- Consider the context of use
+
+3. Technical Analysis:
+- Required implementation components
+- Integration requirements
+- State management needs
+- Performance considerations
+- Security implications
+
+4. UX Considerations:
+- Interaction patterns
+- Accessibility requirements
+- Responsive behavior
+- Error handling
+- User feedback mechanisms
+
+Format your response EXACTLY as follows. Do not omit any section, even if you have to make up a value:
+TITLE: [Business Value] - [Specific Feature/Component]
+USER_STORY: As a [specific user type], I want [detailed action/feature] so that [clear business/user benefit]
+
+ACCEPTANCE_CRITERIA:
+- [Detailed, testable criterion 1]
+...
+
+TECHNICAL_REQUIREMENTS:
+- [Specific technical requirement 1]
+...
+
+POINTS: [Just the number: 1, 2, 3, 5, or 8]
+PRIORITY: [Just one word: Highest, High, Medium, or Low]"""
+
+    def _format_properties(self, properties: Dict) -> str:
+        """Format element properties for the prompt"""
+        formatted = []
+        for key, value in properties.items():
+            if isinstance(value, (dict, list)):
+                formatted.append(f"- {key}: {str(value)}")
+            else:
+                formatted.append(f"- {key}: {value}")
+        return "\n".join(formatted)
+
+    def _parse_response(self, response: str) -> DesignAnalysis:
+        """Parse the AI response into structured data"""
+        try:
+            lines = response.split('\n')
+            data = {
+                'title': '',
+                'description': '',
+                'user_story': '',
+                'acceptance_criteria': [],
+                'technical_requirements': [],
+                'story_points': 3,
+                'priority': 'Medium',
+                'type': 'Feature'  # Default type
+            }
+            
+            current_section = None
+            for line in lines:
+                line = line.strip()
+                if not line:
+                    continue
+                    
+                if line.startswith('TITLE:'):
+                    data['title'] = line.replace('TITLE:', '').strip()
+                elif line.startswith('USER_STORY:'):
+                    data['user_story'] = line.replace('USER_STORY:', '').strip()
+                elif line.startswith('ACCEPTANCE_CRITERIA:'):
+                    current_section = 'acceptance_criteria'
+                elif line.startswith('TECHNICAL_REQUIREMENTS:'):
+                    current_section = 'technical_requirements'
+                elif line.startswith('POINTS:'):
+                    # Extract just the number from the points line
+                    points_text = line.replace('POINTS:', '').strip()
+                    # Take first number found in the string
+                    points_match = next((char for char in points_text if char.isdigit()), '3')
+                    data['story_points'] = int(points_match)
+                elif line.startswith('PRIORITY:'):
+                    # Extract just the priority level without justification
+                    priority_text = line.replace('PRIORITY:', '').strip()
+                    priority_words = priority_text.split()
+                    if priority_words:
+                        data['priority'] = priority_words[0]  # Take first word as priority
+                elif line.startswith('TYPE:'):
+                    # Extract story type
+                    type_text = line.replace('TYPE:', '').strip()
+                    data['type'] = type_text if type_text else 'Feature'
+                elif line.startswith('-') and current_section:
+                    data[current_section].append(line.replace('-', '').strip())
+            
+            # Validate story points are within acceptable range
+            if data['story_points'] not in [1, 2, 3, 5, 8]:
+                logger.warning(f"Invalid story points value: {data['story_points']}, defaulting to 3")
+                data['story_points'] = 3
+                
+            # Validate priority is a known value
+            valid_priorities = ['Highest', 'High', 'Medium', 'Low']
+            if data['priority'] not in valid_priorities:
+                logger.warning(f"Invalid priority value: {data['priority']}, defaulting to Medium")
+                data['priority'] = 'Medium'
+            
+            return DesignAnalysis(
+                title=data['title'],
+                description=data['user_story'],
+                user_story=data['user_story'],
+                acceptance_criteria=data['acceptance_criteria'],
+                technical_requirements=data['technical_requirements'],
+                story_points=data['story_points'],
+                priority=data['priority'],
+                type=data['type']
+            )
+            
+        except Exception as e:
+            logger.error(f"Error parsing AI response: {e}")
+            raise
+
+    def generate_epic_summary(self, components: List[Dict], context: str) -> str:
+        """
+        Generate an epic summary based on multiple components
+        
+        Args:
+            components: List of analyzed components
+            
+        Returns:
+            Epic summary text
+        """
+        try:
+            # Prepare component summaries
+            summaries = []
+            for analysis in components:
+                summaries.append(f"- {analysis.title}: {analysis.user_story}")
+            
+            # Get AI to generate epic summary
+            response = self.client.chat.completions.create(
+                model=self.config.get("model", "gpt-3.5-turbo"),
+                temperature=self.config.get("temperature", 0.7),
+                messages=[
+                    {"role": "system", "content": "You are a product manager. Create an epic summary based on these related user stories."},
+                    {"role": "user", "content": f"Please create an epic summary based on these stories:\n\n{''.join(summaries)}"}
+                ]
+            )
+            
+            return response.choices[0].message.content
+            
+        except Exception as e:
+            logger.error(f"Error generating epic summary: {e}")
+            raise
+
+    def analyze_element_with_context(self, element: dict, product_context: str) -> DesignAnalysis:
+        """
+        Analyze a design element with consolidated product context and generate a user story.
+        Args:
+            element: Trimmed Figma design element
+            product_context: Consolidated application context (string or dict)
+        Returns:
+            Analysis results including story details
+        """
+        try:
+            # Use the same detailed prompt structure as analyze_element
+            element_prompt = self._create_element_prompt(element)
+            # If product_context is a dict, format it; if string, use as is
+            if isinstance(product_context, dict):
+                formatted_context = self._format_context(product_context)
+            else:
+                formatted_context = product_context
+
+            contextualized_prompt = self.system_prompt.format(
+                application_context=formatted_context
+            )
+
+            # Print or log the prompts and content for debugging
+            print("\n--- OpenAI SYSTEM PROMPT (Element with Context) ---\n", contextualized_prompt)
+            print("\n--- OpenAI USER PROMPT (Element with Context) ---\n", element_prompt)
+            print("\n--- Figma Element ---\n", element)
+
+            # Get AI completion
+            response = self.client.chat.completions.create(
+                model=self.config.get("model", "gpt-4.0-turbo"),
+                temperature=self.config.get("temperature", 0.7),
+                messages=[
+                    {"role": "system", "content": contextualized_prompt},
+                    {"role": "user", "content": element_prompt}
+                ]
+            )
+
+            print("LLM Response:\n", response.choices[0].message.content)
+
+            # Parse and structure the response
+            return self._parse_response(response.choices[0].message.content)
+
+        except Exception as e:
+            logger.error(f"Error analyzing element with context: {e}")
+            raise

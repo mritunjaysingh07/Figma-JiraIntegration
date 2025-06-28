@@ -1,0 +1,99 @@
+{
+  "document": {
+    "id": "0:0",
+    "name": "Digital Assistant Interface",
+    "type": "DOCUMENT",
+    "children": [
+      {
+        "id": "1:0",
+        "name": "Main Chat Interface",
+        "type": "FRAME",
+        "description": "Main chat interface with message history and input area",
+        "children": [
+          {
+            "id": "1:1",
+            "name": "Message History",
+            "type": "COMPONENT",
+            "description": "Scrollable message history showing conversation between user and assistant",
+            "properties": {
+              "layout": "VERTICAL",
+              "scrolling": "VERTICAL",
+              "overflow": "SCROLL"
+            }
+          },
+          {
+            "id": "1:2",
+            "name": "Message Input",
+            "type": "COMPONENT",
+            "description": "Text input area with send button and attachment options",
+            "properties": {
+              "layout": "HORIZONTAL",
+              "constraints": {
+                "horizontal": "STRETCH",
+                "vertical": "BOTTOM"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "2:0",
+        "name": "Settings Panel",
+        "type": "FRAME",
+        "description": "User preferences and settings configuration panel",
+        "children": [
+          {
+            "id": "2:1",
+            "name": "Language Settings",
+            "type": "COMPONENT",
+            "description": "Language selection and voice preferences",
+            "properties": {
+              "layout": "VERTICAL"
+            }
+          },
+          {
+            "id": "2:2",
+            "name": "Theme Settings",
+            "type": "COMPONENT",
+            "description": "Visual theme and accessibility options",
+            "properties": {
+              "layout": "VERTICAL"
+            }
+          }
+        ]
+      },
+      {
+        "id": "3:0",
+        "name": "Quick Actions",
+        "type": "FRAME",
+        "description": "Toolbar with frequently used actions",
+        "children": [
+          {
+            "id": "3:1",
+            "name": "Voice Input Toggle",
+            "type": "COMPONENT",
+            "description": "Button to toggle voice input mode",
+            "properties": {
+              "constraints": {
+                "horizontal": "LEFT",
+                "vertical": "CENTER"
+              }
+            }
+          },
+          {
+            "id": "3:2",
+            "name": "File Upload",
+            "type": "COMPONENT",
+            "description": "Button to upload and share files",
+            "properties": {
+              "constraints": {
+                "horizontal": "LEFT",
+                "vertical": "CENTER"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+} 

@@ -1,0 +1,42 @@
+# Logging configuration
+logging:
+  file: "app.log"
+  max_size: "10 MB"
+  backup_count: 3
+
+# Jira configuration
+jira:
+  project_key: "SCRUM"
+  url: "https://mjsingh07.atlassian.net"
+  email: "mj.singh07@gmail.com"
+  api_token: "ATATT3xFfGF0pQ-duVe0CIGHaZ7fjIFjolL8w6sgWz5OQyukFg4McM_AAFqIyV-vuDO9en0EPobIk-d02yiwisfxHes-RRc4Pg2j2aETHF_mKaXZsDRblVlBrK7kuDQYs0nCR69CTranUCtz440QWcuYXRcg9zS9t_VkZK7CxG1vfXcj2U85Pog=16DEA1A0"
+  fields:
+    story_points: "customfield_10016"
+    epic_link: "customfield_10014"
+    epic_name: "customfield_10011"
+    design_link: "customfield_10010"
+
+# AI configuration
+ai:
+  model: "gpt-3.5-turbo"
+  temperature: 0.7
+  max_tokens: 2000
+  openai_api_key: "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"
+  prompt_templates:
+    story_analysis: "Analyze this design element and create a user story..."
+    acceptance_criteria: "Generate acceptance criteria for..."
+    technical_requirements: "Generate technical requirements for..."
+
+# Figma configuration
+figma:
+  access_token: "figd_gWs0c-0D-efazwGKPzrkHfKEm2WC_LZWgCmC-q4e"
+  # components_to_analyze:
+  #   - "FRAME"
+  #   - "COMPONENT"
+  #   - "INSTANCE"
+  #   - "TEXT"
+  #   - "GROUP"
+  rate_limit:
+    calls_per_minute: 60
+    min_delay: 1.0 
+    

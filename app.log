@@ -1,0 +1,1581 @@
+2025-06-26 23:39:52 | INFO     | src.services.figma_service:fetch_design:26 - Fetched Figma design successfully.
+2025-06-26 23:39:53 | INFO     | src.ai_processor:analyze_application_context:81 - Using system prompt for context analysis:
+You are an expert in analyzing digital product designs. Please analyze the following design elements and provide a structured overview in the exact format shown below:
+
+Core Purpose: [Brief description of the application's main purpose]
+
+Target Users:
+- [User type 1]
+- [User type 2]
+
+Key Features:
+- [Feature 1]
+- [Feature 2]
+
+User Flows:
+- [Flow 1]
+- [Flow 2]
+
+Shared Components:
+- [Component 1]
+- [Component 2]
+
+Technical Architecture:
+- [Architecture element 1]
+- [Architecture element 2]
+
+Please ensure your response follows this exact structure and format.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:96 - Raw LLM response for context analysis:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:102 - Parsed application context:
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:103 - Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:104 - Target Users:
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:106 - - Individual users looking to manage their personal tasks and to
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:106 - - do lists.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:106 - - Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:107 - Key Features:
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:109 - - Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:109 - - Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:110 - User Flows:
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:112 - - Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:112 - - Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:113 - Shared Components:
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:115 - - Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:115 - - Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:116 - Technical Architecture:
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:118 - - Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_application_context:118 - - Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+2025-06-26 23:39:55 | INFO     | __main__:process_and_create_jira:82 - Application context: Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+2025-06-26 23:39:55 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type CANVAS, using basic template
+2025-06-26 23:39:55 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element Page 1:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: CANVAS
+Name: Page 1
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:39:57 | WARNING  | src.ai_processor:_parse_response:287 - No title found in response, using fallback
+2025-06-26 23:39:57 | INFO     | __main__:process_and_create_jira:92 - DEBUG: Creating Jira story with summary: 'CANVAS - Page 1'
+2025-06-26 23:39:57 | INFO     | src.services.jira_service:create_story:73 - Jira Story Description:
+As a user, I want to view Page 1 on the canvas so that I can interact with its elements effectively.
+
+h3. Acceptance Criteria
+- Page 1 should load without errors.
+- All interactive elements on Page 1 should be clickable.
+- The layout of Page 1 should be visually appealing and easy to navigate.
+
+2025-06-26 23:39:57 | INFO     | src.services.jira_service:create_story:74 - Extra fields passed: {}
+2025-06-26 23:39:59 | INFO     | src.services.jira_service:create_story:76 - Created Jira story: SCRUM-775
+2025-06-26 23:39:59 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:39:59 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 6. PRESS ‘CALL’ BUTTON:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 6. PRESS CALL BUTTON
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:02 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:02 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:02 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:02 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:02 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:02 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:02 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 6. PRESS ‘CALL’ BUTTON: Story does not meet Jira quality requirements
+2025-06-26 23:40:02 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:02 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 5. CHOOSE DEPARTMENT, IF YOU NEED:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 5. CHOOSE DEPARTMENT, IF YOU NEED
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:03 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:03 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:03 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:03 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:03 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:03 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:03 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 5. CHOOSE DEPARTMENT, IF YOU NEED: Story does not meet Jira quality requirements
+2025-06-26 23:40:03 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:03 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 4. CHOOSE A COMPANY WHICH YOU WANT TO CALL/add your own:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 4. CHOOSE A COMPANY WHICH YOU WANT TO CALL/add you...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:04 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:04 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:04 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:04 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:04 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:04 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:04 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 4. CHOOSE A COMPANY WHICH YOU WANT TO CALL/add your own: Story does not meet Jira quality requirements
+2025-06-26 23:40:04 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:04 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 4.:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 4.
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:09 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:09 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:09 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:09 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:09 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:09 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:09 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 4.: Story does not meet Jira quality requirements
+2025-06-26 23:40:09 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:09 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element I build a DIGITAL ASSISTANT app. . The app could be installed at different smarthones, laptops, all digital device… It works like:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: I build a DIGITAL ASSISTANT app. . The app could b...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:11 | WARNING  | src.ai_processor:_parse_response:287 - No title found in response, using fallback
+2025-06-26 23:40:11 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['Title too long', 'Invalid user story format', 'No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:11 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Consider a more concise title', "Use format: 'As a X, I want Y, so that Z'", 'Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:11 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:11 | ERROR    | src.ai_processor:analyze_element_with_context:451 - - Missing description
+2025-06-26 23:40:11 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:11 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:11 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:11 | ERROR    | __main__:process_and_create_jira:104 - Error processing element I build a DIGITAL ASSISTANT app. . The app could be installed at different smarthones, laptops, all digital device… It works like: Story does not meet Jira quality requirements
+2025-06-26 23:40:11 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:11 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element Phase I: Executing on product development and design • Understand your market and problem o Identify 4-5 problems that exist (within your area of interest), develop clear criteria to prioritize the problems, and narrow down to 2-3 problems. o Generate clear problem statements for the chosen problems. o Define the market that your business/product exists in. o Determine who could fit in your target audience. o Narrow down the target audience and interview 5 people that are in your target audience demographic to help generate real user personas. o Conduct 5-10 user interviews with people in your target audience to identify potential JTBD for your app/website. o Record all existing Jobs To Be Done, categorize, and prioritize them based off of opportunity size and risk. o Calculate the following: § WhatisyourTotalAvailableMarket? § WhatisyourServiceableAvailableMarket? § WhatisyourShareofMarket? Zero to One: Turn Your Idea Into a Designed App Summer 2022 DSN 07 Quarterly Design Assignment:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: Phase I: Executing on product development and desi...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:14 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:14 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:14 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:14 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:14 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:14 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:14 | ERROR    | __main__:process_and_create_jira:104 - Error processing element Phase I: Executing on product development and design • Understand your market and problem o Identify 4-5 problems that exist (within your area of interest), develop clear criteria to prioritize the problems, and narrow down to 2-3 problems. o Generate clear problem statements for the chosen problems. o Define the market that your business/product exists in. o Determine who could fit in your target audience. o Narrow down the target audience and interview 5 people that are in your target audience demographic to help generate real user personas. o Conduct 5-10 user interviews with people in your target audience to identify potential JTBD for your app/website. o Record all existing Jobs To Be Done, categorize, and prioritize them based off of opportunity size and risk. o Calculate the following: § WhatisyourTotalAvailableMarket? § WhatisyourServiceableAvailableMarket? § WhatisyourShareofMarket? Zero to One: Turn Your Idea Into a Designed App Summer 2022 DSN 07 Quarterly Design Assignment: Story does not meet Jira quality requirements
+2025-06-26 23:40:14 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:14 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element and:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: and
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:16 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:16 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:16 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:16 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:16 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:16 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:16 | ERROR    | __main__:process_and_create_jira:104 - Error processing element and: Story does not meet Jira quality requirements
+2025-06-26 23:40:16 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:16 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element HOW IT WORKS:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: HOW IT WORKS
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:17 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:17 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:17 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:17 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:17 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:17 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:17 | ERROR    | __main__:process_and_create_jira:104 - Error processing element HOW IT WORKS: Story does not meet Jira quality requirements
+2025-06-26 23:40:17 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:17 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element FOR WHOM who value TIME (we all) who works “on-call” ( personal assistants, bookers, bisiness representatives) who “non-digital”:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: FOR WHOM who value TIME (we all) who works on-call...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:19 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:19 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:19 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:19 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:19 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:19 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:19 | ERROR    | __main__:process_and_create_jira:104 - Error processing element FOR WHOM who value TIME (we all) who works “on-call” ( personal assistants, bookers, bisiness representatives) who “non-digital”: Story does not meet Jira quality requirements
+2025-06-26 23:40:19 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:19 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element SOLUTION:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: SOLUTION
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:20 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:20 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:20 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:20 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:20 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:20 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:20 | ERROR    | __main__:process_and_create_jira:104 - Error processing element SOLUTION: Story does not meet Jira quality requirements
+2025-06-26 23:40:20 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:20 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element PAIN : “I have to waste my time , hours of my life then i call to aviacompany / IRS,/bank, “i have to wait for human representative’s answer (not voicemail, music) “i hve to press a lot of comands ( numbers, special symbols (*#):
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: PAIN : I have to waste my time , hours of my life ...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:22 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:22 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:22 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:22 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:22 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:22 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:22 | ERROR    | __main__:process_and_create_jira:104 - Error processing element PAIN : “I have to waste my time , hours of my life then i call to aviacompany / IRS,/bank, “i have to wait for human representative’s answer (not voicemail, music) “i hve to press a lot of comands ( numbers, special symbols (*#): Story does not meet Jira quality requirements
+2025-06-26 23:40:22 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:22 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element INSTAL THE APP:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: INSTAL THE APP
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:23 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:23 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:23 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:23 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:23 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:23 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:23 | ERROR    | __main__:process_and_create_jira:104 - Error processing element INSTAL THE APP: Story does not meet Jira quality requirements
+2025-06-26 23:40:23 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:23 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 3. WELCOME SCREENS (PICTURES CHANGE DEPEND ON TIME: MORNING/ DAY/ NIGHT):
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 3. WELCOME SCREENS (PICTURES CHANGE DEPEND ON TIME...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:24 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:24 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:24 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:24 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:24 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:24 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:24 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 3. WELCOME SCREENS (PICTURES CHANGE DEPEND ON TIME: MORNING/ DAY/ NIGHT): Story does not meet Jira quality requirements
+2025-06-26 23:40:24 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:24 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 2. OPEN APP:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 2. OPEN APP
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:25 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:25 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:25 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:25 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:25 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:25 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:25 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 2. OPEN APP: Story does not meet Jira quality requirements
+2025-06-26 23:40:25 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:25 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 7. ENJOY YOUR TIME (YOU CAN NORMALLY USE YOUR DEVICE):
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 7. ENJOY YOUR TIME (YOU CAN NORMALLY USE YOUR DEVI...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:27 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:27 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:27 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:27 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:27 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:27 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:27 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 7. ENJOY YOUR TIME (YOU CAN NORMALLY USE YOUR DEVICE): Story does not meet Jira quality requirements
+2025-06-26 23:40:27 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:27 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 8. DIGITAL ASISSTANT AY/RAY/AI WILL STAY ONLINE BEFORE HUMAN REPRESENTATIVE WILL ANSWER:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 8. DIGITAL ASISSTANT AY/RAY/AI WILL STAY ONLINE BE...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:28 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:28 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:28 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:28 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:29 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:29 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:29 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 8. DIGITAL ASISSTANT AY/RAY/AI WILL STAY ONLINE BEFORE HUMAN REPRESENTATIVE WILL ANSWER: Story does not meet Jira quality requirements
+2025-06-26 23:40:29 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:29 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element MARKET SIZE:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: MARKET SIZE
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:30 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['Invalid user story format', 'No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:30 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ["Use format: 'As a X, I want Y, so that Z'", 'Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:30 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:30 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:30 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:30 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:30 | ERROR    | __main__:process_and_create_jira:104 - Error processing element MARKET SIZE: Story does not meet Jira quality requirements
+2025-06-26 23:40:30 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:30 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element "When I'm going to call to bank, I want to not spent a lot of time and attention be on call, so I can enjoy my time without worrying about forgetting/ missing numbers/ special signs which bank’s voicemail gives me ".  "When I have to change dates for my business trip and I have to call to airlines and stay on call long time , I want to still be able to use my smartphone normally, so I can call my friends the same time " "When my mother asks me to call to insurance company , I want to do it easily, so I can be attention to speak with her, not with insurance’s voicemail.”:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: When I'm going to call to bank, I want to not spen...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:32 | INFO     | __main__:process_and_create_jira:92 - DEBUG: Creating Jira story with summary: 'Avoid spending unnecessary time on phone calls'
+2025-06-26 23:40:32 | INFO     | src.services.jira_service:create_story:73 - Jira Story Description:
+As a user, I want to quickly reach the right department when calling the bank so that I can save time and avoid unnecessary waiting.
+
+h3. Acceptance Criteria
+- User can easily navigate the bank's automated phone system to reach the desired department.
+- The system provides clear and concise options for different banking services.
+- Users receive prompt assistance without spending excessive time on hold.
+
+2025-06-26 23:40:32 | INFO     | src.services.jira_service:create_story:74 - Extra fields passed: {}
+2025-06-26 23:40:33 | INFO     | src.services.jira_service:create_story:76 - Created Jira story: SCRUM-776
+2025-06-26 23:40:33 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:33 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element JTBD:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: JTBD
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:34 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:34 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:34 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:34 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:34 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:34 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:34 | ERROR    | __main__:process_and_create_jira:104 - Error processing element JTBD: Story does not meet Jira quality requirements
+2025-06-26 23:40:34 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:34 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element 9. AY WILL GIVE YOU CALL BACK THAN HE DETERMINE HUMAN VOICE:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: 9. AY WILL GIVE YOU CALL BACK THAN HE DETERMINE HU...
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:36 | WARNING  | src.ai_processor:analyze_element_with_context:435 - Quality issues found: ['No acceptance criteria', 'No technical requirements']
+2025-06-26 23:40:36 | INFO     | src.ai_processor:analyze_element_with_context:436 - Suggestions: ['Add at least 2 acceptance criteria', 'Add at least 1 technical requirement']
+2025-06-26 23:40:36 | ERROR    | src.ai_processor:analyze_element_with_context:447 - Missing required Jira fields:
+2025-06-26 23:40:36 | ERROR    | src.ai_processor:analyze_element_with_context:453 - - Missing acceptance criteria
+2025-06-26 23:40:36 | ERROR    | src.ai_processor:analyze_element_with_context:455 - - Missing technical requirements
+2025-06-26 23:40:36 | ERROR    | src.ai_processor:analyze_element_with_context:466 - Error in analysis: Story does not meet Jira quality requirements
+2025-06-26 23:40:36 | ERROR    | __main__:process_and_create_jira:104 - Error processing element 9. AY WILL GIVE YOU CALL BACK THAN HE DETERMINE HUMAN VOICE: Story does not meet Jira quality requirements
+2025-06-26 23:40:36 | WARNING  | src.templates.template_manager:get_template:18 - No template found for type TEXT, using basic template
+2025-06-26 23:40:36 | INFO     | src.ai_processor:analyze_element_with_context:426 - Using prompt for element “AY, SAVE MY DAY! “:
+Core Purpose: The application is a task management tool designed to help individuals and teams organize, prioritize, and track their tasks and projects efficiently.
+
+Target Users:
+- Individual users looking to manage their personal tasks and to-do lists.
+- Teams and organizations seeking a collaborative platform to coordinate and track group projects and assignments.
+
+Key Features:
+- Task creation and assignment: Users can create tasks, set deadlines, and assign them to themselves or team members.
+- Task tracking and progress monitoring: Users can track the status of tasks, mark them as complete, and monitor overall progress.
+
+User Flows:
+- Flow 1: User creates a new task, sets a deadline, and assigns it to a team member.
+- Flow 2: User updates the status of a task, adds comments, and notifies team members of any changes.
+
+Shared Components:
+- Task card: A visual representation of a task displaying key information such as title, deadline, assignee, and status.
+- Comment section: A space for users to communicate, provide updates, and collaborate on tasks.
+
+Technical Architecture:
+- Frontend: The application's frontend is built using React.js to create a responsive and interactive user interface.
+- Backend: The backend is developed using Node.js and MongoDB to store and manage task data, user information, and collaboration features.
+
+You are an expert in analyzing digital product designs. Please analyze the following design element and provide a structured analysis in the exact format shown below:
+
+Type: TEXT
+Name: AY, SAVE MY DAY!
+Description: 
+
+Properties:
+
+
+Please analyze this element and provide the following information:
+
+# Required Fields - Must be present and non-empty:
+TITLE: [Brief, clear title for the story] (Required, must be 1-50 characters)
+USER_STORY: [User story in the format: As a [user], I want [feature] so that [benefit]] (Required)
+
+# Optional Fields - Please provide if relevant:
+ACCEPTANCE_CRITERIA:
+- [Criteria 1]
+- [Criteria 2]
+TECHNICAL_REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+
+# Estimation Fields:
+POINTS: [Estimate story points (1, 2, 3, 5, 8)] (Optional, default 3)
+PRIORITY: [Priority level (Highest, High, Medium, Low)] (Optional, default Medium)
+TYPE: [Story type (Feature, Bug, Task, etc.)] (Optional, default Feature)
+
+Important Notes:
+1. The TITLE must be between 1-50 characters long.
+2. The USER_STORY must follow the format: As a [user], I want [feature] so that [benefit].
+3. All responses must be in English.
+4. Use clear, concise language.
+5. Do not include any HTML or markdown formatting.
+
+Please ensure your response follows this exact structure and format. If you cannot provide a valid title or user story, please say so explicitly.
+2025-06-26 23:40:38 | INFO     | __main__:process_and_create_jira:92 - DEBUG: Creating Jira story with summary: 'Allow Users to Input Task Titles'
+2025-06-26 23:40:38 | INFO     | src.services.jira_service:create_story:73 - Jira Story Description:
+As a user, I want the ability to input task titles so that I can clearly identify and distinguish between different tasks.
+
+h3. Acceptance Criteria
+- The text input field for the task title should allow a minimum of 1 character and a maximum of 100 characters.
+- Users should be able to edit the task title before saving it.
+
+
+h3. Technical Requirements
+- Implement a text input field component for users to enter task titles.
+- Validate the input to ensure it falls within the specified character limits.
+
+2025-06-26 23:40:38 | INFO     | src.services.jira_service:create_story:74 - Extra fields passed: {}
+2025-06-26 23:40:39 | INFO     | src.services.jira_service:create_story:76 - Created Jira story: SCRUM-777

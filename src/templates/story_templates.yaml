@@ -1,0 +1,27 @@
+templates:
+  FRAME:
+    title_format: "{type}: {action} - {component}"
+    user_story_format: "As a {user_type}, I want to {action} so that {benefit}"
+    required_sections:
+      - acceptance_criteria
+      - technical_requirements
+    story_points_range: [2, 5]
+    default_priority: "Medium"
+
+  COMPONENT:
+    title_format: "Component: {name} - {action}"
+    user_story_format: "As a {user_type}, I need {component} to {action} so that {benefit}"
+    required_sections:
+      - acceptance_criteria
+    story_points_range: [1, 3]
+    default_priority: "Low"
+
+  SCREEN:
+    title_format: "Screen: {name}"
+    user_story_format: "As a {user_type}, I want to access {screen} to {action} so that {benefit}"
+    required_sections:
+      - acceptance_criteria
+      - technical_requirements
+      - ux_requirements
+    story_points_range: [3, 8]
+    default_priority: "High"
